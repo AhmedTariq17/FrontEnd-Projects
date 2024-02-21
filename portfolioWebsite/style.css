@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    color: #fff;
+    background-color: #060514;
+    background-image:
+        radial-gradient(at 9% 89%, hsla(215, 90%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 72% 6%, rgb(63, 16, 110) 0px, transparent 50%),
+        radial-gradient(at 24% 19%, rgb(10, 23, 161) 0px, transparent 50%),
+        radial-gradient(at 65% 6%, rgb(29, 27, 62) 0px, transparent 50%),
+        radial-gradient(at 20% 98%, rgb(12, 9, 106) 0px, transparent 50%),
+        radial-gradient(at 44% 9%, rgb(12, 14, 22) 0px, transparent 50%),
+        radial-gradient(at 10% 9%, rgb(4, 28, 110) 0px, transparent 50%);
+    min-height: 100vh;
+    font-size: 16px; /* Base font size */
+    line-height: 1.6; /* Base line height */
+}
+
+a {
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s ease; /* Smooth color transition for hover */
+}
+
+a:hover {
+    color: #2668db; /* Color for hover state */
+}
+
+ul.nav-links a {
+    color: #fff; /* Color for navbar links */
+}
+
+ul.nav-links a:hover {
+    color: #4d4dff; /* Color for navbar links on hover */
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+.button-link button:focus {
+    outline: none; /* Removes the outline on focus */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.glass-container {
+    background: rgba(0, 0, 0, 0.56);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+    margin: 2rem;
+    width: 80vw; /* Adjusted width */
+    max-width: 1200px; /* Maximum width */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem; /* Adjusted size */
+    font-weight: 700;
+}
+
+ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Consistent gap between nav items */
+}
+
+li.nav-link {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.main h1 {
+    font-size: 2.5rem; /* Adjusted size */
+}
+
+.main p {
+    margin-bottom: 1rem;
+}
+
+.image-wrapper {
+    text-align: center; /* Center the image */
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
+.button-link button {
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #2668db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.button-link button:hover {
+    background-color: #1a4d8f;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column width as necessary */
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-item {
+    border: 2px solid #9ecaed;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px 2px #9ecaed;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.03);
+}
+
+.project-media {
+    width: 100%; /* ensures images are responsive */
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain; /* ensures the entire image is visible */
+    border-radius: 10px;
+    box-shadow: 0 0 8px 2px #9ecaed; /* gives a glowing effect */
+}
+  
+  /* Continue with additional styling as needed */
+  
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@media screen and (max-width: 1075px) {
+    .glass-container {
+        width: 90vw; /* Slightly wider on smaller screens */
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    ul.nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .main h1 {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+
+    .image-wrapper img {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .button-link button {
+        font-size: 0.9rem; /* Smaller font size on mobile */
+    }
+}
